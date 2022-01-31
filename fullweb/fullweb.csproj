@@ -1,0 +1,952 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10BE3B3B-94EC-4345-BB5E-3156E86C0EC3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fullweb</RootNamespace>
+    <AssemblyName>fullweb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\assets\css\animate.css" />
+    <Content Include="admin\assets\css\app-style.css" />
+    <Content Include="admin\assets\css\bootstrap.min.css" />
+    <Content Include="admin\assets\css\icons.css" />
+    <Content Include="admin\assets\css\sidebar-menu.css" />
+    <Content Include="admin\assets\flags\1x1\ad.svg" />
+    <Content Include="admin\assets\flags\1x1\ae.svg" />
+    <Content Include="admin\assets\flags\1x1\af.svg" />
+    <Content Include="admin\assets\flags\1x1\ag.svg" />
+    <Content Include="admin\assets\flags\1x1\ai.svg" />
+    <Content Include="admin\assets\flags\1x1\al.svg" />
+    <Content Include="admin\assets\flags\1x1\am.svg" />
+    <Content Include="admin\assets\flags\1x1\ao.svg" />
+    <Content Include="admin\assets\flags\1x1\aq.svg" />
+    <Content Include="admin\assets\flags\1x1\ar.svg" />
+    <Content Include="admin\assets\flags\1x1\as.svg" />
+    <Content Include="admin\assets\flags\1x1\at.svg" />
+    <Content Include="admin\assets\flags\1x1\au.svg" />
+    <Content Include="admin\assets\flags\1x1\aw.svg" />
+    <Content Include="admin\assets\flags\1x1\ax.svg" />
+    <Content Include="admin\assets\flags\1x1\az.svg" />
+    <Content Include="admin\assets\flags\1x1\ba.svg" />
+    <Content Include="admin\assets\flags\1x1\bb.svg" />
+    <Content Include="admin\assets\flags\1x1\bd.svg" />
+    <Content Include="admin\assets\flags\1x1\be.svg" />
+    <Content Include="admin\assets\flags\1x1\bf.svg" />
+    <Content Include="admin\assets\flags\1x1\bg.svg" />
+    <Content Include="admin\assets\flags\1x1\bh.svg" />
+    <Content Include="admin\assets\flags\1x1\bi.svg" />
+    <Content Include="admin\assets\flags\1x1\bj.svg" />
+    <Content Include="admin\assets\flags\1x1\bl.svg" />
+    <Content Include="admin\assets\flags\1x1\bm.svg" />
+    <Content Include="admin\assets\flags\1x1\bn.svg" />
+    <Content Include="admin\assets\flags\1x1\bo.svg" />
+    <Content Include="admin\assets\flags\1x1\bq.svg" />
+    <Content Include="admin\assets\flags\1x1\br.svg" />
+    <Content Include="admin\assets\flags\1x1\bs.svg" />
+    <Content Include="admin\assets\flags\1x1\bt.svg" />
+    <Content Include="admin\assets\flags\1x1\bv.svg" />
+    <Content Include="admin\assets\flags\1x1\bw.svg" />
+    <Content Include="admin\assets\flags\1x1\by.svg" />
+    <Content Include="admin\assets\flags\1x1\bz.svg" />
+    <Content Include="admin\assets\flags\1x1\ca.svg" />
+    <Content Include="admin\assets\flags\1x1\cc.svg" />
+    <Content Include="admin\assets\flags\1x1\cd.svg" />
+    <Content Include="admin\assets\flags\1x1\cf.svg" />
+    <Content Include="admin\assets\flags\1x1\cg.svg" />
+    <Content Include="admin\assets\flags\1x1\ch.svg" />
+    <Content Include="admin\assets\flags\1x1\ci.svg" />
+    <Content Include="admin\assets\flags\1x1\ck.svg" />
+    <Content Include="admin\assets\flags\1x1\cl.svg" />
+    <Content Include="admin\assets\flags\1x1\cm.svg" />
+    <Content Include="admin\assets\flags\1x1\cn.svg" />
+    <Content Include="admin\assets\flags\1x1\co.svg" />
+    <Content Include="admin\assets\flags\1x1\cr.svg" />
+    <Content Include="admin\assets\flags\1x1\cu.svg" />
+    <Content Include="admin\assets\flags\1x1\cv.svg" />
+    <Content Include="admin\assets\flags\1x1\cw.svg" />
+    <Content Include="admin\assets\flags\1x1\cx.svg" />
+    <Content Include="admin\assets\flags\1x1\cy.svg" />
+    <Content Include="admin\assets\flags\1x1\cz.svg" />
+    <Content Include="admin\assets\flags\1x1\de.svg" />
+    <Content Include="admin\assets\flags\1x1\dj.svg" />
+    <Content Include="admin\assets\flags\1x1\dk.svg" />
+    <Content Include="admin\assets\flags\1x1\dm.svg" />
+    <Content Include="admin\assets\flags\1x1\do.svg" />
+    <Content Include="admin\assets\flags\1x1\dz.svg" />
+    <Content Include="admin\assets\flags\1x1\ec.svg" />
+    <Content Include="admin\assets\flags\1x1\ee.svg" />
+    <Content Include="admin\assets\flags\1x1\eg.svg" />
+    <Content Include="admin\assets\flags\1x1\eh.svg" />
+    <Content Include="admin\assets\flags\1x1\er.svg" />
+    <Content Include="admin\assets\flags\1x1\es-ct.svg" />
+    <Content Include="admin\assets\flags\1x1\es.svg" />
+    <Content Include="admin\assets\flags\1x1\et.svg" />
+    <Content Include="admin\assets\flags\1x1\eu.svg" />
+    <Content Include="admin\assets\flags\1x1\fi.svg" />
+    <Content Include="admin\assets\flags\1x1\fj.svg" />
+    <Content Include="admin\assets\flags\1x1\fk.svg" />
+    <Content Include="admin\assets\flags\1x1\fm.svg" />
+    <Content Include="admin\assets\flags\1x1\fo.svg" />
+    <Content Include="admin\assets\flags\1x1\fr.svg" />
+    <Content Include="admin\assets\flags\1x1\ga.svg" />
+    <Content Include="admin\assets\flags\1x1\gb-eng.svg" />
+    <Content Include="admin\assets\flags\1x1\gb-nir.svg" />
+    <Content Include="admin\assets\flags\1x1\gb-sct.svg" />
+    <Content Include="admin\assets\flags\1x1\gb-wls.svg" />
+    <Content Include="admin\assets\flags\1x1\gb.svg" />
+    <Content Include="admin\assets\flags\1x1\gd.svg" />
+    <Content Include="admin\assets\flags\1x1\ge.svg" />
+    <Content Include="admin\assets\flags\1x1\gf.svg" />
+    <Content Include="admin\assets\flags\1x1\gg.svg" />
+    <Content Include="admin\assets\flags\1x1\gh.svg" />
+    <Content Include="admin\assets\flags\1x1\gi.svg" />
+    <Content Include="admin\assets\flags\1x1\gl.svg" />
+    <Content Include="admin\assets\flags\1x1\gm.svg" />
+    <Content Include="admin\assets\flags\1x1\gn.svg" />
+    <Content Include="admin\assets\flags\1x1\gp.svg" />
+    <Content Include="admin\assets\flags\1x1\gq.svg" />
+    <Content Include="admin\assets\flags\1x1\gr.svg" />
+    <Content Include="admin\assets\flags\1x1\gs.svg" />
+    <Content Include="admin\assets\flags\1x1\gt.svg" />
+    <Content Include="admin\assets\flags\1x1\gu.svg" />
+    <Content Include="admin\assets\flags\1x1\gw.svg" />
+    <Content Include="admin\assets\flags\1x1\gy.svg" />
+    <Content Include="admin\assets\flags\1x1\hk.svg" />
+    <Content Include="admin\assets\flags\1x1\hm.svg" />
+    <Content Include="admin\assets\flags\1x1\hn.svg" />
+    <Content Include="admin\assets\flags\1x1\hr.svg" />
+    <Content Include="admin\assets\flags\1x1\ht.svg" />
+    <Content Include="admin\assets\flags\1x1\hu.svg" />
+    <Content Include="admin\assets\flags\1x1\id.svg" />
+    <Content Include="admin\assets\flags\1x1\ie.svg" />
+    <Content Include="admin\assets\flags\1x1\il.svg" />
+    <Content Include="admin\assets\flags\1x1\im.svg" />
+    <Content Include="admin\assets\flags\1x1\in.svg" />
+    <Content Include="admin\assets\flags\1x1\io.svg" />
+    <Content Include="admin\assets\flags\1x1\iq.svg" />
+    <Content Include="admin\assets\flags\1x1\ir.svg" />
+    <Content Include="admin\assets\flags\1x1\is.svg" />
+    <Content Include="admin\assets\flags\1x1\it.svg" />
+    <Content Include="admin\assets\flags\1x1\je.svg" />
+    <Content Include="admin\assets\flags\1x1\jm.svg" />
+    <Content Include="admin\assets\flags\1x1\jo.svg" />
+    <Content Include="admin\assets\flags\1x1\jp.svg" />
+    <Content Include="admin\assets\flags\1x1\ke.svg" />
+    <Content Include="admin\assets\flags\1x1\kg.svg" />
+    <Content Include="admin\assets\flags\1x1\kh.svg" />
+    <Content Include="admin\assets\flags\1x1\ki.svg" />
+    <Content Include="admin\assets\flags\1x1\km.svg" />
+    <Content Include="admin\assets\flags\1x1\kn.svg" />
+    <Content Include="admin\assets\flags\1x1\kp.svg" />
+    <Content Include="admin\assets\flags\1x1\kr.svg" />
+    <Content Include="admin\assets\flags\1x1\kw.svg" />
+    <Content Include="admin\assets\flags\1x1\ky.svg" />
+    <Content Include="admin\assets\flags\1x1\kz.svg" />
+    <Content Include="admin\assets\flags\1x1\la.svg" />
+    <Content Include="admin\assets\flags\1x1\lb.svg" />
+    <Content Include="admin\assets\flags\1x1\lc.svg" />
+    <Content Include="admin\assets\flags\1x1\li.svg" />
+    <Content Include="admin\assets\flags\1x1\lk.svg" />
+    <Content Include="admin\assets\flags\1x1\lr.svg" />
+    <Content Include="admin\assets\flags\1x1\ls.svg" />
+    <Content Include="admin\assets\flags\1x1\lt.svg" />
+    <Content Include="admin\assets\flags\1x1\lu.svg" />
+    <Content Include="admin\assets\flags\1x1\lv.svg" />
+    <Content Include="admin\assets\flags\1x1\ly.svg" />
+    <Content Include="admin\assets\flags\1x1\ma.svg" />
+    <Content Include="admin\assets\flags\1x1\mc.svg" />
+    <Content Include="admin\assets\flags\1x1\md.svg" />
+    <Content Include="admin\assets\flags\1x1\me.svg" />
+    <Content Include="admin\assets\flags\1x1\mf.svg" />
+    <Content Include="admin\assets\flags\1x1\mg.svg" />
+    <Content Include="admin\assets\flags\1x1\mh.svg" />
+    <Content Include="admin\assets\flags\1x1\mk.svg" />
+    <Content Include="admin\assets\flags\1x1\ml.svg" />
+    <Content Include="admin\assets\flags\1x1\mm.svg" />
+    <Content Include="admin\assets\flags\1x1\mn.svg" />
+    <Content Include="admin\assets\flags\1x1\mo.svg" />
+    <Content Include="admin\assets\flags\1x1\mp.svg" />
+    <Content Include="admin\assets\flags\1x1\mq.svg" />
+    <Content Include="admin\assets\flags\1x1\mr.svg" />
+    <Content Include="admin\assets\flags\1x1\ms.svg" />
+    <Content Include="admin\assets\flags\1x1\mt.svg" />
+    <Content Include="admin\assets\flags\1x1\mu.svg" />
+    <Content Include="admin\assets\flags\1x1\mv.svg" />
+    <Content Include="admin\assets\flags\1x1\mw.svg" />
+    <Content Include="admin\assets\flags\1x1\mx.svg" />
+    <Content Include="admin\assets\flags\1x1\my.svg" />
+    <Content Include="admin\assets\flags\1x1\mz.svg" />
+    <Content Include="admin\assets\flags\1x1\na.svg" />
+    <Content Include="admin\assets\flags\1x1\nc.svg" />
+    <Content Include="admin\assets\flags\1x1\ne.svg" />
+    <Content Include="admin\assets\flags\1x1\nf.svg" />
+    <Content Include="admin\assets\flags\1x1\ng.svg" />
+    <Content Include="admin\assets\flags\1x1\ni.svg" />
+    <Content Include="admin\assets\flags\1x1\nl.svg" />
+    <Content Include="admin\assets\flags\1x1\no.svg" />
+    <Content Include="admin\assets\flags\1x1\np.svg" />
+    <Content Include="admin\assets\flags\1x1\nr.svg" />
+    <Content Include="admin\assets\flags\1x1\nu.svg" />
+    <Content Include="admin\assets\flags\1x1\nz.svg" />
+    <Content Include="admin\assets\flags\1x1\om.svg" />
+    <Content Include="admin\assets\flags\1x1\pa.svg" />
+    <Content Include="admin\assets\flags\1x1\pe.svg" />
+    <Content Include="admin\assets\flags\1x1\pf.svg" />
+    <Content Include="admin\assets\flags\1x1\pg.svg" />
+    <Content Include="admin\assets\flags\1x1\ph.svg" />
+    <Content Include="admin\assets\flags\1x1\pk.svg" />
+    <Content Include="admin\assets\flags\1x1\pl.svg" />
+    <Content Include="admin\assets\flags\1x1\pm.svg" />
+    <Content Include="admin\assets\flags\1x1\pn.svg" />
+    <Content Include="admin\assets\flags\1x1\pr.svg" />
+    <Content Include="admin\assets\flags\1x1\ps.svg" />
+    <Content Include="admin\assets\flags\1x1\pt.svg" />
+    <Content Include="admin\assets\flags\1x1\pw.svg" />
+    <Content Include="admin\assets\flags\1x1\py.svg" />
+    <Content Include="admin\assets\flags\1x1\qa.svg" />
+    <Content Include="admin\assets\flags\1x1\re.svg" />
+    <Content Include="admin\assets\flags\1x1\ro.svg" />
+    <Content Include="admin\assets\flags\1x1\rs.svg" />
+    <Content Include="admin\assets\flags\1x1\ru.svg" />
+    <Content Include="admin\assets\flags\1x1\rw.svg" />
+    <Content Include="admin\assets\flags\1x1\sa.svg" />
+    <Content Include="admin\assets\flags\1x1\sb.svg" />
+    <Content Include="admin\assets\flags\1x1\sc.svg" />
+    <Content Include="admin\assets\flags\1x1\sd.svg" />
+    <Content Include="admin\assets\flags\1x1\se.svg" />
+    <Content Include="admin\assets\flags\1x1\sg.svg" />
+    <Content Include="admin\assets\flags\1x1\sh.svg" />
+    <Content Include="admin\assets\flags\1x1\si.svg" />
+    <Content Include="admin\assets\flags\1x1\sj.svg" />
+    <Content Include="admin\assets\flags\1x1\sk.svg" />
+    <Content Include="admin\assets\flags\1x1\sl.svg" />
+    <Content Include="admin\assets\flags\1x1\sm.svg" />
+    <Content Include="admin\assets\flags\1x1\sn.svg" />
+    <Content Include="admin\assets\flags\1x1\so.svg" />
+    <Content Include="admin\assets\flags\1x1\sr.svg" />
+    <Content Include="admin\assets\flags\1x1\ss.svg" />
+    <Content Include="admin\assets\flags\1x1\st.svg" />
+    <Content Include="admin\assets\flags\1x1\sv.svg" />
+    <Content Include="admin\assets\flags\1x1\sx.svg" />
+    <Content Include="admin\assets\flags\1x1\sy.svg" />
+    <Content Include="admin\assets\flags\1x1\sz.svg" />
+    <Content Include="admin\assets\flags\1x1\tc.svg" />
+    <Content Include="admin\assets\flags\1x1\td.svg" />
+    <Content Include="admin\assets\flags\1x1\tf.svg" />
+    <Content Include="admin\assets\flags\1x1\tg.svg" />
+    <Content Include="admin\assets\flags\1x1\th.svg" />
+    <Content Include="admin\assets\flags\1x1\tj.svg" />
+    <Content Include="admin\assets\flags\1x1\tk.svg" />
+    <Content Include="admin\assets\flags\1x1\tl.svg" />
+    <Content Include="admin\assets\flags\1x1\tm.svg" />
+    <Content Include="admin\assets\flags\1x1\tn.svg" />
+    <Content Include="admin\assets\flags\1x1\to.svg" />
+    <Content Include="admin\assets\flags\1x1\tr.svg" />
+    <Content Include="admin\assets\flags\1x1\tt.svg" />
+    <Content Include="admin\assets\flags\1x1\tv.svg" />
+    <Content Include="admin\assets\flags\1x1\tw.svg" />
+    <Content Include="admin\assets\flags\1x1\tz.svg" />
+    <Content Include="admin\assets\flags\1x1\ua.svg" />
+    <Content Include="admin\assets\flags\1x1\ug.svg" />
+    <Content Include="admin\assets\flags\1x1\um.svg" />
+    <Content Include="admin\assets\flags\1x1\un.svg" />
+    <Content Include="admin\assets\flags\1x1\us.svg" />
+    <Content Include="admin\assets\flags\1x1\uy.svg" />
+    <Content Include="admin\assets\flags\1x1\uz.svg" />
+    <Content Include="admin\assets\flags\1x1\va.svg" />
+    <Content Include="admin\assets\flags\1x1\vc.svg" />
+    <Content Include="admin\assets\flags\1x1\ve.svg" />
+    <Content Include="admin\assets\flags\1x1\vg.svg" />
+    <Content Include="admin\assets\flags\1x1\vi.svg" />
+    <Content Include="admin\assets\flags\1x1\vn.svg" />
+    <Content Include="admin\assets\flags\1x1\vu.svg" />
+    <Content Include="admin\assets\flags\1x1\wf.svg" />
+    <Content Include="admin\assets\flags\1x1\ws.svg" />
+    <Content Include="admin\assets\flags\1x1\ye.svg" />
+    <Content Include="admin\assets\flags\1x1\yt.svg" />
+    <Content Include="admin\assets\flags\1x1\za.svg" />
+    <Content Include="admin\assets\flags\1x1\zm.svg" />
+    <Content Include="admin\assets\flags\1x1\zw.svg" />
+    <Content Include="admin\assets\flags\4x3\ad.svg" />
+    <Content Include="admin\assets\flags\4x3\ae.svg" />
+    <Content Include="admin\assets\flags\4x3\af.svg" />
+    <Content Include="admin\assets\flags\4x3\ag.svg" />
+    <Content Include="admin\assets\flags\4x3\ai.svg" />
+    <Content Include="admin\assets\flags\4x3\al.svg" />
+    <Content Include="admin\assets\flags\4x3\am.svg" />
+    <Content Include="admin\assets\flags\4x3\ao.svg" />
+    <Content Include="admin\assets\flags\4x3\aq.svg" />
+    <Content Include="admin\assets\flags\4x3\ar.svg" />
+    <Content Include="admin\assets\flags\4x3\as.svg" />
+    <Content Include="admin\assets\flags\4x3\at.svg" />
+    <Content Include="admin\assets\flags\4x3\au.svg" />
+    <Content Include="admin\assets\flags\4x3\aw.svg" />
+    <Content Include="admin\assets\flags\4x3\ax.svg" />
+    <Content Include="admin\assets\flags\4x3\az.svg" />
+    <Content Include="admin\assets\flags\4x3\ba.svg" />
+    <Content Include="admin\assets\flags\4x3\bb.svg" />
+    <Content Include="admin\assets\flags\4x3\bd.svg" />
+    <Content Include="admin\assets\flags\4x3\be.svg" />
+    <Content Include="admin\assets\flags\4x3\bf.svg" />
+    <Content Include="admin\assets\flags\4x3\bg.svg" />
+    <Content Include="admin\assets\flags\4x3\bh.svg" />
+    <Content Include="admin\assets\flags\4x3\bi.svg" />
+    <Content Include="admin\assets\flags\4x3\bj.svg" />
+    <Content Include="admin\assets\flags\4x3\bl.svg" />
+    <Content Include="admin\assets\flags\4x3\bm.svg" />
+    <Content Include="admin\assets\flags\4x3\bn.svg" />
+    <Content Include="admin\assets\flags\4x3\bo.svg" />
+    <Content Include="admin\assets\flags\4x3\bq.svg" />
+    <Content Include="admin\assets\flags\4x3\br.svg" />
+    <Content Include="admin\assets\flags\4x3\bs.svg" />
+    <Content Include="admin\assets\flags\4x3\bt.svg" />
+    <Content Include="admin\assets\flags\4x3\bv.svg" />
+    <Content Include="admin\assets\flags\4x3\bw.svg" />
+    <Content Include="admin\assets\flags\4x3\by.svg" />
+    <Content Include="admin\assets\flags\4x3\bz.svg" />
+    <Content Include="admin\assets\flags\4x3\ca.svg" />
+    <Content Include="admin\assets\flags\4x3\cc.svg" />
+    <Content Include="admin\assets\flags\4x3\cd.svg" />
+    <Content Include="admin\assets\flags\4x3\cf.svg" />
+    <Content Include="admin\assets\flags\4x3\cg.svg" />
+    <Content Include="admin\assets\flags\4x3\ch.svg" />
+    <Content Include="admin\assets\flags\4x3\ci.svg" />
+    <Content Include="admin\assets\flags\4x3\ck.svg" />
+    <Content Include="admin\assets\flags\4x3\cl.svg" />
+    <Content Include="admin\assets\flags\4x3\cm.svg" />
+    <Content Include="admin\assets\flags\4x3\cn.svg" />
+    <Content Include="admin\assets\flags\4x3\co.svg" />
+    <Content Include="admin\assets\flags\4x3\cr.svg" />
+    <Content Include="admin\assets\flags\4x3\cu.svg" />
+    <Content Include="admin\assets\flags\4x3\cv.svg" />
+    <Content Include="admin\assets\flags\4x3\cw.svg" />
+    <Content Include="admin\assets\flags\4x3\cx.svg" />
+    <Content Include="admin\assets\flags\4x3\cy.svg" />
+    <Content Include="admin\assets\flags\4x3\cz.svg" />
+    <Content Include="admin\assets\flags\4x3\de.svg" />
+    <Content Include="admin\assets\flags\4x3\dj.svg" />
+    <Content Include="admin\assets\flags\4x3\dk.svg" />
+    <Content Include="admin\assets\flags\4x3\dm.svg" />
+    <Content Include="admin\assets\flags\4x3\do.svg" />
+    <Content Include="admin\assets\flags\4x3\dz.svg" />
+    <Content Include="admin\assets\flags\4x3\ec.svg" />
+    <Content Include="admin\assets\flags\4x3\ee.svg" />
+    <Content Include="admin\assets\flags\4x3\eg.svg" />
+    <Content Include="admin\assets\flags\4x3\eh.svg" />
+    <Content Include="admin\assets\flags\4x3\er.svg" />
+    <Content Include="admin\assets\flags\4x3\es-ct.svg" />
+    <Content Include="admin\assets\flags\4x3\es.svg" />
+    <Content Include="admin\assets\flags\4x3\et.svg" />
+    <Content Include="admin\assets\flags\4x3\eu.svg" />
+    <Content Include="admin\assets\flags\4x3\fi.svg" />
+    <Content Include="admin\assets\flags\4x3\fj.svg" />
+    <Content Include="admin\assets\flags\4x3\fk.svg" />
+    <Content Include="admin\assets\flags\4x3\fm.svg" />
+    <Content Include="admin\assets\flags\4x3\fo.svg" />
+    <Content Include="admin\assets\flags\4x3\fr.svg" />
+    <Content Include="admin\assets\flags\4x3\ga.svg" />
+    <Content Include="admin\assets\flags\4x3\gb-eng.svg" />
+    <Content Include="admin\assets\flags\4x3\gb-nir.svg" />
+    <Content Include="admin\assets\flags\4x3\gb-sct.svg" />
+    <Content Include="admin\assets\flags\4x3\gb-wls.svg" />
+    <Content Include="admin\assets\flags\4x3\gb.svg" />
+    <Content Include="admin\assets\flags\4x3\gd.svg" />
+    <Content Include="admin\assets\flags\4x3\ge.svg" />
+    <Content Include="admin\assets\flags\4x3\gf.svg" />
+    <Content Include="admin\assets\flags\4x3\gg.svg" />
+    <Content Include="admin\assets\flags\4x3\gh.svg" />
+    <Content Include="admin\assets\flags\4x3\gi.svg" />
+    <Content Include="admin\assets\flags\4x3\gl.svg" />
+    <Content Include="admin\assets\flags\4x3\gm.svg" />
+    <Content Include="admin\assets\flags\4x3\gn.svg" />
+    <Content Include="admin\assets\flags\4x3\gp.svg" />
+    <Content Include="admin\assets\flags\4x3\gq.svg" />
+    <Content Include="admin\assets\flags\4x3\gr.svg" />
+    <Content Include="admin\assets\flags\4x3\gs.svg" />
+    <Content Include="admin\assets\flags\4x3\gt.svg" />
+    <Content Include="admin\assets\flags\4x3\gu.svg" />
+    <Content Include="admin\assets\flags\4x3\gw.svg" />
+    <Content Include="admin\assets\flags\4x3\gy.svg" />
+    <Content Include="admin\assets\flags\4x3\hk.svg" />
+    <Content Include="admin\assets\flags\4x3\hm.svg" />
+    <Content Include="admin\assets\flags\4x3\hn.svg" />
+    <Content Include="admin\assets\flags\4x3\hr.svg" />
+    <Content Include="admin\assets\flags\4x3\ht.svg" />
+    <Content Include="admin\assets\flags\4x3\hu.svg" />
+    <Content Include="admin\assets\flags\4x3\id.svg" />
+    <Content Include="admin\assets\flags\4x3\ie.svg" />
+    <Content Include="admin\assets\flags\4x3\il.svg" />
+    <Content Include="admin\assets\flags\4x3\im.svg" />
+    <Content Include="admin\assets\flags\4x3\in.svg" />
+    <Content Include="admin\assets\flags\4x3\io.svg" />
+    <Content Include="admin\assets\flags\4x3\iq.svg" />
+    <Content Include="admin\assets\flags\4x3\ir.svg" />
+    <Content Include="admin\assets\flags\4x3\is.svg" />
+    <Content Include="admin\assets\flags\4x3\it.svg" />
+    <Content Include="admin\assets\flags\4x3\je.svg" />
+    <Content Include="admin\assets\flags\4x3\jm.svg" />
+    <Content Include="admin\assets\flags\4x3\jo.svg" />
+    <Content Include="admin\assets\flags\4x3\jp.svg" />
+    <Content Include="admin\assets\flags\4x3\ke.svg" />
+    <Content Include="admin\assets\flags\4x3\kg.svg" />
+    <Content Include="admin\assets\flags\4x3\kh.svg" />
+    <Content Include="admin\assets\flags\4x3\ki.svg" />
+    <Content Include="admin\assets\flags\4x3\km.svg" />
+    <Content Include="admin\assets\flags\4x3\kn.svg" />
+    <Content Include="admin\assets\flags\4x3\kp.svg" />
+    <Content Include="admin\assets\flags\4x3\kr.svg" />
+    <Content Include="admin\assets\flags\4x3\kw.svg" />
+    <Content Include="admin\assets\flags\4x3\ky.svg" />
+    <Content Include="admin\assets\flags\4x3\kz.svg" />
+    <Content Include="admin\assets\flags\4x3\la.svg" />
+    <Content Include="admin\assets\flags\4x3\lb.svg" />
+    <Content Include="admin\assets\flags\4x3\lc.svg" />
+    <Content Include="admin\assets\flags\4x3\li.svg" />
+    <Content Include="admin\assets\flags\4x3\lk.svg" />
+    <Content Include="admin\assets\flags\4x3\lr.svg" />
+    <Content Include="admin\assets\flags\4x3\ls.svg" />
+    <Content Include="admin\assets\flags\4x3\lt.svg" />
+    <Content Include="admin\assets\flags\4x3\lu.svg" />
+    <Content Include="admin\assets\flags\4x3\lv.svg" />
+    <Content Include="admin\assets\flags\4x3\ly.svg" />
+    <Content Include="admin\assets\flags\4x3\ma.svg" />
+    <Content Include="admin\assets\flags\4x3\mc.svg" />
+    <Content Include="admin\assets\flags\4x3\md.svg" />
+    <Content Include="admin\assets\flags\4x3\me.svg" />
+    <Content Include="admin\assets\flags\4x3\mf.svg" />
+    <Content Include="admin\assets\flags\4x3\mg.svg" />
+    <Content Include="admin\assets\flags\4x3\mh.svg" />
+    <Content Include="admin\assets\flags\4x3\mk.svg" />
+    <Content Include="admin\assets\flags\4x3\ml.svg" />
+    <Content Include="admin\assets\flags\4x3\mm.svg" />
+    <Content Include="admin\assets\flags\4x3\mn.svg" />
+    <Content Include="admin\assets\flags\4x3\mo.svg" />
+    <Content Include="admin\assets\flags\4x3\mp.svg" />
+    <Content Include="admin\assets\flags\4x3\mq.svg" />
+    <Content Include="admin\assets\flags\4x3\mr.svg" />
+    <Content Include="admin\assets\flags\4x3\ms.svg" />
+    <Content Include="admin\assets\flags\4x3\mt.svg" />
+    <Content Include="admin\assets\flags\4x3\mu.svg" />
+    <Content Include="admin\assets\flags\4x3\mv.svg" />
+    <Content Include="admin\assets\flags\4x3\mw.svg" />
+    <Content Include="admin\assets\flags\4x3\mx.svg" />
+    <Content Include="admin\assets\flags\4x3\my.svg" />
+    <Content Include="admin\assets\flags\4x3\mz.svg" />
+    <Content Include="admin\assets\flags\4x3\na.svg" />
+    <Content Include="admin\assets\flags\4x3\nc.svg" />
+    <Content Include="admin\assets\flags\4x3\ne.svg" />
+    <Content Include="admin\assets\flags\4x3\nf.svg" />
+    <Content Include="admin\assets\flags\4x3\ng.svg" />
+    <Content Include="admin\assets\flags\4x3\ni.svg" />
+    <Content Include="admin\assets\flags\4x3\nl.svg" />
+    <Content Include="admin\assets\flags\4x3\no.svg" />
+    <Content Include="admin\assets\flags\4x3\np.svg" />
+    <Content Include="admin\assets\flags\4x3\nr.svg" />
+    <Content Include="admin\assets\flags\4x3\nu.svg" />
+    <Content Include="admin\assets\flags\4x3\nz.svg" />
+    <Content Include="admin\assets\flags\4x3\om.svg" />
+    <Content Include="admin\assets\flags\4x3\pa.svg" />
+    <Content Include="admin\assets\flags\4x3\pe.svg" />
+    <Content Include="admin\assets\flags\4x3\pf.svg" />
+    <Content Include="admin\assets\flags\4x3\pg.svg" />
+    <Content Include="admin\assets\flags\4x3\ph.svg" />
+    <Content Include="admin\assets\flags\4x3\pk.svg" />
+    <Content Include="admin\assets\flags\4x3\pl.svg" />
+    <Content Include="admin\assets\flags\4x3\pm.svg" />
+    <Content Include="admin\assets\flags\4x3\pn.svg" />
+    <Content Include="admin\assets\flags\4x3\pr.svg" />
+    <Content Include="admin\assets\flags\4x3\ps.svg" />
+    <Content Include="admin\assets\flags\4x3\pt.svg" />
+    <Content Include="admin\assets\flags\4x3\pw.svg" />
+    <Content Include="admin\assets\flags\4x3\py.svg" />
+    <Content Include="admin\assets\flags\4x3\qa.svg" />
+    <Content Include="admin\assets\flags\4x3\re.svg" />
+    <Content Include="admin\assets\flags\4x3\ro.svg" />
+    <Content Include="admin\assets\flags\4x3\rs.svg" />
+    <Content Include="admin\assets\flags\4x3\ru.svg" />
+    <Content Include="admin\assets\flags\4x3\rw.svg" />
+    <Content Include="admin\assets\flags\4x3\sa.svg" />
+    <Content Include="admin\assets\flags\4x3\sb.svg" />
+    <Content Include="admin\assets\flags\4x3\sc.svg" />
+    <Content Include="admin\assets\flags\4x3\sd.svg" />
+    <Content Include="admin\assets\flags\4x3\se.svg" />
+    <Content Include="admin\assets\flags\4x3\sg.svg" />
+    <Content Include="admin\assets\flags\4x3\sh.svg" />
+    <Content Include="admin\assets\flags\4x3\si.svg" />
+    <Content Include="admin\assets\flags\4x3\sj.svg" />
+    <Content Include="admin\assets\flags\4x3\sk.svg" />
+    <Content Include="admin\assets\flags\4x3\sl.svg" />
+    <Content Include="admin\assets\flags\4x3\sm.svg" />
+    <Content Include="admin\assets\flags\4x3\sn.svg" />
+    <Content Include="admin\assets\flags\4x3\so.svg" />
+    <Content Include="admin\assets\flags\4x3\sr.svg" />
+    <Content Include="admin\assets\flags\4x3\ss.svg" />
+    <Content Include="admin\assets\flags\4x3\st.svg" />
+    <Content Include="admin\assets\flags\4x3\sv.svg" />
+    <Content Include="admin\assets\flags\4x3\sx.svg" />
+    <Content Include="admin\assets\flags\4x3\sy.svg" />
+    <Content Include="admin\assets\flags\4x3\sz.svg" />
+    <Content Include="admin\assets\flags\4x3\tc.svg" />
+    <Content Include="admin\assets\flags\4x3\td.svg" />
+    <Content Include="admin\assets\flags\4x3\tf.svg" />
+    <Content Include="admin\assets\flags\4x3\tg.svg" />
+    <Content Include="admin\assets\flags\4x3\th.svg" />
+    <Content Include="admin\assets\flags\4x3\tj.svg" />
+    <Content Include="admin\assets\flags\4x3\tk.svg" />
+    <Content Include="admin\assets\flags\4x3\tl.svg" />
+    <Content Include="admin\assets\flags\4x3\tm.svg" />
+    <Content Include="admin\assets\flags\4x3\tn.svg" />
+    <Content Include="admin\assets\flags\4x3\to.svg" />
+    <Content Include="admin\assets\flags\4x3\tr.svg" />
+    <Content Include="admin\assets\flags\4x3\tt.svg" />
+    <Content Include="admin\assets\flags\4x3\tv.svg" />
+    <Content Include="admin\assets\flags\4x3\tw.svg" />
+    <Content Include="admin\assets\flags\4x3\tz.svg" />
+    <Content Include="admin\assets\flags\4x3\ua.svg" />
+    <Content Include="admin\assets\flags\4x3\ug.svg" />
+    <Content Include="admin\assets\flags\4x3\um.svg" />
+    <Content Include="admin\assets\flags\4x3\un.svg" />
+    <Content Include="admin\assets\flags\4x3\us.svg" />
+    <Content Include="admin\assets\flags\4x3\uy.svg" />
+    <Content Include="admin\assets\flags\4x3\uz.svg" />
+    <Content Include="admin\assets\flags\4x3\va.svg" />
+    <Content Include="admin\assets\flags\4x3\vc.svg" />
+    <Content Include="admin\assets\flags\4x3\ve.svg" />
+    <Content Include="admin\assets\flags\4x3\vg.svg" />
+    <Content Include="admin\assets\flags\4x3\vi.svg" />
+    <Content Include="admin\assets\flags\4x3\vn.svg" />
+    <Content Include="admin\assets\flags\4x3\vu.svg" />
+    <Content Include="admin\assets\flags\4x3\wf.svg" />
+    <Content Include="admin\assets\flags\4x3\ws.svg" />
+    <Content Include="admin\assets\flags\4x3\ye.svg" />
+    <Content Include="admin\assets\flags\4x3\yt.svg" />
+    <Content Include="admin\assets\flags\4x3\za.svg" />
+    <Content Include="admin\assets\flags\4x3\zm.svg" />
+    <Content Include="admin\assets\flags\4x3\zw.svg" />
+    <Content Include="admin\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="admin\assets\fonts\Simple-Line-Iconsb26c.svg" />
+    <Content Include="admin\assets\fonts\themify9f24.svg" />
+    <Content Include="admin\assets\font\weathericons-regular-webfont-2.html" />
+    <Content Include="admin\assets\font\weathericons-regular-webfont-3.html" />
+    <Content Include="admin\assets\font\weathericons-regular-webfont.html" />
+    <Content Include="admin\assets\images\avatars\avatar-1.png" />
+    <Content Include="admin\assets\images\avatars\avatar-10.png" />
+    <Content Include="admin\assets\images\avatars\avatar-13.png" />
+    <Content Include="admin\assets\images\avatars\avatar-14.png" />
+    <Content Include="admin\assets\images\avatars\avatar-15.png" />
+    <Content Include="admin\assets\images\avatars\avatar-16.png" />
+    <Content Include="admin\assets\images\avatars\avatar-17.png" />
+    <Content Include="admin\assets\images\avatars\avatar-18.png" />
+    <Content Include="admin\assets\images\avatars\avatar-2.png" />
+    <Content Include="admin\assets\images\avatars\avatar-3.png" />
+    <Content Include="admin\assets\images\avatars\avatar-4.png" />
+    <Content Include="admin\assets\images\avatars\avatar-5.png" />
+    <Content Include="admin\assets\images\avatars\avatar-6.png" />
+    <Content Include="admin\assets\images\avatars\avatar-7.png" />
+    <Content Include="admin\assets\images\avatars\avatar-8.png" />
+    <Content Include="admin\assets\images\avatars\avatar-9.png" />
+    <Content Include="admin\assets\images\bg-sighn-2.jpg" />
+    <Content Include="admin\assets\images\bg-sighn-21.png" />
+    <Content Include="admin\assets\images\bg-themes\1.png" />
+    <Content Include="admin\assets\images\bg-themes\2.png" />
+    <Content Include="admin\assets\images\bg-themes\3.png" />
+    <Content Include="admin\assets\images\bg-themes\4.png" />
+    <Content Include="admin\assets\images\bg-themes\5.png" />
+    <Content Include="admin\assets\images\bg-themes\6.png" />
+    <Content Include="admin\assets\images\coming-soon.png" />
+    <Content Include="admin\assets\images\error-texture.png" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-1.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-10.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-11.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-12.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-13.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-14.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-15.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-16.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-2.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-3.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-4.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-5.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-6.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-7.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-8.jpg" />
+    <Content Include="admin\assets\images\fancybox\big\big-img-9.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-1.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-10.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-11.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-12.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-13.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-14.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-15.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-16.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-2.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-3.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-4.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-5.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-6.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-7.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-8.jpg" />
+    <Content Include="admin\assets\images\fancybox\small\small-img-9.jpg" />
+    <Content Include="admin\assets\images\favicon.ico" />
+    <Content Include="admin\assets\images\gallery\1.jpg" />
+    <Content Include="admin\assets\images\gallery\10.jpg" />
+    <Content Include="admin\assets\images\gallery\11.jpg" />
+    <Content Include="admin\assets\images\gallery\12.jpg" />
+    <Content Include="admin\assets\images\gallery\16.jpg" />
+    <Content Include="admin\assets\images\gallery\17.jpg" />
+    <Content Include="admin\assets\images\gallery\18.jpg" />
+    <Content Include="admin\assets\images\gallery\19.jpg" />
+    <Content Include="admin\assets\images\gallery\2.jpg" />
+    <Content Include="admin\assets\images\gallery\20.jpg" />
+    <Content Include="admin\assets\images\gallery\21.jpg" />
+    <Content Include="admin\assets\images\gallery\25.jpg" />
+    <Content Include="admin\assets\images\gallery\26.jpg" />
+    <Content Include="admin\assets\images\gallery\3.jpg" />
+    <Content Include="admin\assets\images\gallery\31.jpg" />
+    <Content Include="admin\assets\images\gallery\4.jpg" />
+    <Content Include="admin\assets\images\gallery\6.jpg" />
+    <Content Include="admin\assets\images\gallery\7.jpg" />
+    <Content Include="admin\assets\images\gallery\8.jpg" />
+    <Content Include="admin\assets\images\gallery\9.jpg" />
+    <Content Include="admin\assets\images\gallery\modal-img.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-1.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-10.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-11.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-12.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-2.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-4.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-5.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-6.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-7.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-8.jpg" />
+    <Content Include="admin\assets\images\gallery\slider-9.jpg" />
+    <Content Include="admin\assets\images\Icon.jpg" />
+    <Content Include="admin\assets\images\logo-icon.png" />
+    <Content Include="admin\assets\images\payment-icons\american-dark.png" />
+    <Content Include="admin\assets\images\payment-icons\mastro-dark.png" />
+    <Content Include="admin\assets\images\payment-icons\paypal-dark.png" />
+    <Content Include="admin\assets\images\payment-icons\visa-dark.png" />
+    <Content Include="admin\assets\images\products\01.png" />
+    <Content Include="admin\assets\images\products\02.png" />
+    <Content Include="admin\assets\images\products\03.png" />
+    <Content Include="admin\assets\images\products\04.png" />
+    <Content Include="admin\assets\images\products\05.png" />
+    <Content Include="admin\assets\images\products\06.png" />
+    <Content Include="admin\assets\images\products\property01.jpg" />
+    <Content Include="admin\assets\images\products\property02.jpg" />
+    <Content Include="admin\assets\images\products\property03.jpg" />
+    <Content Include="admin\assets\images\products\property04.jpg" />
+    <Content Include="admin\assets\images\products\property05.jpg" />
+    <Content Include="admin\assets\images\timeline\angular-icon.svg" />
+    <Content Include="admin\assets\images\timeline\bootstrap-4.svg" />
+    <Content Include="admin\assets\images\timeline\cd-arrow.svg" />
+    <Content Include="admin\assets\images\timeline\cd-icon-location.svg" />
+    <Content Include="admin\assets\images\timeline\cd-icon-movie.svg" />
+    <Content Include="admin\assets\images\timeline\cd-icon-picture.svg" />
+    <Content Include="admin\assets\images\timeline\html5.svg" />
+    <Content Include="admin\assets\images\timeline\react.svg" />
+    <Content Include="admin\assets\js\app-script.js" />
+    <Content Include="admin\assets\js\bootstrap.min.js" />
+    <Content Include="admin\assets\js\index.js" />
+    <Content Include="admin\assets\js\index2.js" />
+    <Content Include="admin\assets\js\jquery.loading-indicator.html" />
+    <Content Include="admin\assets\js\jquery.min.js" />
+    <Content Include="admin\assets\js\logistics.js" />
+    <Content Include="admin\assets\js\popper.min.js" />
+    <Content Include="admin\assets\js\service-support.js" />
+    <Content Include="admin\assets\js\sidebar-menu.js" />
+    <Content Include="admin\assets\js\widgets.js" />
+    <Content Include="admin\assets\plugins\alerts-boxes\js\sweet-alert-script.js" />
+    <Content Include="admin\assets\plugins\alerts-boxes\js\sweetalert.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\css\buttons.bootstrap4.min.css" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\css\dataTables.bootstrap4.min.css" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\buttons.bootstrap4.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\buttons.colVis.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\buttons.html5.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\buttons.print.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\dataTables.bootstrap4.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\dataTables.buttons.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\jquery.dataTables.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\jszip.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\pdfmake.min.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datatable\js\vfs_fonts.js" />
+    <Content Include="admin\assets\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="admin\signin.aspx" />
+    <Content Include="admin\country.aspx" />
+    <Content Include="admin\state.aspx" />
+    <Content Include="admin\city.aspx" />
+    <Content Include="admin\veiw.aspx" />
+    <Content Include="admin\editcountry.aspx" />
+    <Content Include="admin\deletecountry.aspx" />
+    <Content Include="admin\control.aspx" />
+    <Content Include="admin\stateview.aspx" />
+    <Content Include="admin\update_state.aspx" />
+    <Content Include="admin\categoryform.aspx" />
+    <Content Include="admin\categoryview.aspx" />
+    <Content Include="admin\categoryedit.aspx" />
+    <Content Include="admin\categorydelete.aspx" />
+    <Content Include="admin\WebForm15.aspx" />
+    <Content Include="admin\brandform.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\country.aspx.cs">
+      <DependentUpon>country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\country.aspx.designer.cs">
+      <DependentUpon>country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\state.aspx.cs">
+      <DependentUpon>state.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\state.aspx.designer.cs">
+      <DependentUpon>state.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\city.aspx.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\city.aspx.designer.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\veiw.aspx.cs">
+      <DependentUpon>veiw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\veiw.aspx.designer.cs">
+      <DependentUpon>veiw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\editcountry.aspx.cs">
+      <DependentUpon>editcountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\editcountry.aspx.designer.cs">
+      <DependentUpon>editcountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\deletecountry.aspx.cs">
+      <DependentUpon>deletecountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\deletecountry.aspx.designer.cs">
+      <DependentUpon>deletecountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\control.aspx.cs">
+      <DependentUpon>control.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\control.aspx.designer.cs">
+      <DependentUpon>control.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\stateview.aspx.cs">
+      <DependentUpon>stateview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\stateview.aspx.designer.cs">
+      <DependentUpon>stateview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update_state.aspx.cs">
+      <DependentUpon>update_state.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update_state.aspx.designer.cs">
+      <DependentUpon>update_state.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\categoryform.aspx.cs">
+      <DependentUpon>categoryform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\categoryform.aspx.designer.cs">
+      <DependentUpon>categoryform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\categoryview.aspx.cs">
+      <DependentUpon>categoryview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\categoryview.aspx.designer.cs">
+      <DependentUpon>categoryview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\categoryedit.aspx.cs">
+      <DependentUpon>categoryedit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\categoryedit.aspx.designer.cs">
+      <DependentUpon>categoryedit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\categorydelete.aspx.cs">
+      <DependentUpon>categorydelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\categorydelete.aspx.designer.cs">
+      <DependentUpon>categorydelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WebForm15.aspx.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WebForm15.aspx.designer.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\brandform.aspx.cs">
+      <DependentUpon>brandform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\brandform.aspx.designer.cs">
+      <DependentUpon>brandform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="brandform.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="admin\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="admin\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="admin\assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="admin\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="admin\assets\fonts\Material-Design-Iconic-Fontd1f1.ttf" />
+    <Content Include="admin\assets\fonts\Material-Design-Iconic-Fontd1f1.woff" />
+    <Content Include="admin\assets\fonts\Material-Design-Iconic-Fontd1f1.woff2" />
+    <Content Include="admin\assets\fonts\Simple-Line-Iconsb26c.eot" />
+    <Content Include="admin\assets\fonts\Simple-Line-Iconsb26c.ttf" />
+    <Content Include="admin\assets\fonts\Simple-Line-Iconsb26c.woff" />
+    <Content Include="admin\assets\fonts\Simple-Line-Iconsb26c.woff2" />
+    <Content Include="admin\assets\fonts\themify9f24.eot" />
+    <Content Include="admin\assets\fonts\themify9f24.ttf" />
+    <Content Include="admin\assets\fonts\themify9f24.woff" />
+    <Content Include="admin\assets\fonts\themifyd41d.eot" />
+    <Content Include="admin\assets\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="admin\assets\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="admin\assets\fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="admin\Site1.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="admin\assets\plugins\bootstrap-datepicker\js\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6282</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6282/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
